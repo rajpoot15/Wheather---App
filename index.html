@@ -116,7 +116,7 @@
 </div>
 
 <script>
-    // Paste your free OpenWeather API key inside the quotes below
+    // Delete the text inside the quotes below and paste your real OpenWeather API Key
     const apiKey = "YOUR_API_KEY_HERE"; 
 
     async function getWeather() {
@@ -140,7 +140,7 @@
             document.getElementById('humidity').innerText = `${data.main.humidity}%`;
             document.getElementById('wind').innerText = `${data.wind.speed} m/s`;
 
-            // Changes background dynamic styling depending on weather state
+            // Change background based on current weather condition
             const mainWeather = data.weather[0].main.toLowerCase();
             if (mainWeather.includes('rain') || mainWeather.includes('drizzle')) {
                 document.body.style.background = "linear-gradient(135deg, #616c7d, #485563)";
@@ -163,4 +163,3 @@
 
 </body>
 </html>
-
